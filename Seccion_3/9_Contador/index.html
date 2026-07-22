@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Regresivo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #contador {
+            font-size: 2em;
+            margin: 20px;
+        }
+        
+        button {
+            font-size: 1em;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Contador Regresivo</h1>
+    <div id="contador">30</div> <!-- Muestra el tiempo restante -->
+    
+    <button onclick="iniciarContador()">Iniciar</button>
+    <button onclick="detenerContador()">Detener</button>
+    <button onclick="reiniciarContador()">Reiniciar</button>
+
+    <script>
+        let tiempo = 30;
+        let intervalo;
+
+        // Actualiza el número visible en la pantalla
+        function actualizarContador() {
+            document.getElementById("contador").textContent = tiempo;
+        }
+
+        // Resta un segundo y verifica si llegó a cero
+        function contar() {
+            if (tiempo > 0) {
+                tiempo--;
+                console.log(tiempo);
+                actualizarContador();
+            } else {
+                detenerContador();
+                alert("¡Tiempo terminado!");
+            }
+        }
+
+        // Arranca el temporizador si no está corriendo ya
+        function iniciarContador() {
+            if (!intervalo) {
+                intervalo = setInterval(contar, 1000);
+            }
+        }
+
+        // Pausa el avance del tiempo
+        function detenerContador() {
+            clearInterval(intervalo);
+            intervalo = null;
+        }
+
+        // Detiene el tiempo y restablece el contador a 30
+        function reiniciarContador() {
+            detenerContador();
+            tiempo = 30;
+            actualizarContador();
+        }
+
+        // Ejecución inicial para mostrar el número 30 al cargar la página
+        actualizarContador();
+    </script>
+
+</body>
+</html>

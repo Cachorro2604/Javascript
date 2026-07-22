@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Preguntas</title>
+    
+    <style>
+        
+    </style>
+</head>
+
+<body onload="iniciarJuego()">
+
+    <div class="encabezado">
+        <h2>Responde las preguntas lo más rápido que puedas</h2>
+        <h3>Tiempo restante: <span id="contador">30</span> segundos</h3>
+    </div>
+
+
+    <div class="pregunta">
+        <label>1. ¿Cuál es la capital de Francia?</label>
+        <input type="text" id="p1" placeholder="¡Responde aquí!">
+    </div>
+    
+    <div class="pregunta">
+        <label>2. ¿Cuál es el país más grande del mundo?</label>
+        <input type="text" id="p2" placeholder="¡Responde aquí!">
+    </div>
+
+    <div class="pregunta">
+        <label>3. ¿Cuál océano es el más grande del mundo?</label>
+        <input type="text" id="p3" placeholder="¡Responde aquí!">
+    </div>
+
+    <div class="pregunta">
+        <label>4. ¿En qué país se encuentra la Torre Eiffel?</label>
+        <input type="text" id="p4" placeholder="¡Responde aquí!">
+    </div>
+
+    <div class="pregunta">
+        <label>5. ¿Quién pintó la Mona Lisa?</label>
+        <input type="text" id="p5" placeholder="¡Responde aquí!">
+    </div>
+
+    
+    <div>
+        <button onclick="finalizarJuego()">Finalizar</button>
+        <button onclick="location.reload()">Volver a Intentar</button>
+    </div>
+
+    <script>
+        let tiempo = 30;
+        let intervalo;
+
+        function iniciarJuego() {
+            actualizarContador();
+            iniciarContador();
+        }
+
+        function actualizarContador() {
+            document.getElementById("contador").textContent = tiempo;
+        }
+    
+        function contar() {
+            if (tiempo > 0) {
+                tiempo--;
+                actualizarContador();
+            } else {
+                detenerContador();
+                alert("¡GAME OVER!");
+            }
+        }
+
+        function iniciarContador() {
+            if (!intervalo) {
+                intervalo = setInterval(contar, 1000);
+            }
+        }
+    
+        function detenerContador() {
+            clearInterval(intervalo);
+            intervalo = null;
+        }
+    
+        function reiniciarContador() {
+            detenerContador();
+            tiempo = 30;
+            actualizarContador();
+        }
+
+    
+        function finalizarJuego() {
+            detenerContador(); 
+            let fechaHoy = new Date().toLocaleDateString(); 
+            alert("¡Completaste el Juego!. Fecha: " + fechaHoy);
+        }
+    </script>
+
+</body>
+</html>

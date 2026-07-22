@@ -1,0 +1,45 @@
+body {
+            background-color: #f4f4f4; 
+            color: #333333; 
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .encabezado h2 {
+            color: #222222;
+        }
+
+        .pregunta {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 250px;
+            padding: 6px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            text-align: center; 
+        }
+
+        /* Botones sencillos de colegio */
+        button {
+            background-color: #0056b3; /* Azul estándar */
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #004085;
+        }
