@@ -28,9 +28,9 @@ body {
             text-align: center; 
         }
 
-        /* Botones sencillos de colegio */
+        
         button {
-            background-color: #0056b3; /* Azul estándar */
+            background-color: #0056b3;
             color: white;
             border: none;
             padding: 8px 15px;
