@@ -1,19 +1,16 @@
 <!DOCTYPE html>
+<html>
 <head>
-    <title>Redondeo 1</title>
+    <title>Random 1</title>
 </head>
 <body>
     <p>
         <button onclick="mostrarMensaje()">Click aquí</button>
     </p>
     <script>
-        let redondeo;
-        
-        
-        redondeo = Math.round(6.7241569844);
-
         function mostrarMensaje() {
-            alert(redondeo);
+            let aleatorio = Math.floor(Math.random() * (50 - 10 + 1)) + 10;
+            alert(aleatorio);
         }
     </script>
 </body>
