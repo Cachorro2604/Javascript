@@ -1,56 +1,133 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>CALCULADORA</title>
+    <link rel="stylesheet" href="misEstilos.css">
 </head>
 
-<h1>CALCULADORA</h1>
-<div class="num">
-        <label></label>
-        <input type="text" id="p1">
+<body>
+
+<div class="calculadora">
+    <h1>CALCULADORA</h1>
+
+    
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+
+   
+    <div class="operaciones">
+        <button onclick="sumarNumero()">+</button>
+        <button onclick="restarNumero()">-</button>
+        <button onclick="multiplicarNumero()">x</button>
+        <button onclick="dividirNumero()">/</button>
+        <button onclick="raizNumero()">Raiz</button>
+        <button onclick="potenciaNumero()">Potencia</button>
+        <button onclick="absolutoNumero()">Absoluto</button>
+        <button onclick="randomNumero()">Random</button>
     </div>
 
-<div class="num">
-        <label></label>
-        <input type="text" id="p1">
+    <h2>Resultado:</h2>
+
+    <input type="text" id="resultado" readonly placeholder="0"> 
+
+    
+    <div class="redondeo">
+        <button onclick="roundNumero()">Round</button>
+        <button onclick="floorNumero()">Floor</button>
+        <button onclick="ceilNumero()">Ceil</button>
     </div>
-
-<button onlick "sumarNumero">+</button>
-<button onlick "restarNumero">-</button>
-<button onlick "multiplicarNumero">x</button>
-<button onlick "dividirNumero">/</button>
-<button onlick "raizNumero">Raiz</button>
-<button onlick "potenciaNumero">Potencia</button>
-<button onlick "absolutoNumero">Absoluto</button>
-<button onlick "randomNumero">Random</button>
-
-<h2>Resultado:</h2>
-
-<div class="num">
-        <label></label>
-        <input type="text" id="p1">
-    </div>
-
-<button onlick "roundNumero">Round</button>
-<button onlick "floorNumero">Floor</button>
-<button onlick "ceilNumero">Ceil</button>
+</div>
 
 <script>
-    function sumarNumero(){
-    let resultado = sumarNumero();
-            alert(resultado);
+function sumarNumero() {
+    let num1 = Number(document.getElementById("num1").value);
+    let num2 = Number(document.getElementById("num2").value);
+    let resultado = num1 + num2;
+    document.getElementById("resultado").value = resultado;
 
+}
+
+function restarNumero() {
+    let num1 = Number(document.getElementById("num1").value);
+    let num2 = Number(document.getElementById("num2").value);
+    let resultado = num1 - num2;
+    document.getElementById("resultado").value = resultado;
+}
+
+function multiplicarNumero() {
+    let num1 = Number(document.getElementById("num1").value);
+    let num2 = Number(document.getElementById("num2").value);
+    let resultado = num1 * num2;
+    document.getElementById("resultado").value = resultado;
+}
+
+function dividirNumero() {
+    let num1 = Number(document.getElementById("num1").value);
+    let num2 = Number(document.getElementById("num2").value);
+    if (num2 == 0) {
+        document.getElementById("resultado").value = "No se puedek ";
+    } else {
+        let resultado = num1 / num2;
+        document.getElementById("resultado").value = resultado;
     }
+}
 
+function raizNumero() {
+    let num1 = Number(document.getElementById("num1").value);
+    let resultado = Math.sqrt(num1);
+    document.getElementById("resultado").value = resultado;
+}
+
+
+
+function potenciaNumero() {
+    let num1 = Number(document.getElementById("num1").value);
+    let num2 = Number(document.getElementById("num2").value);
+    let resultado = Math.pow(num1, num2);
+    document.getElementById("resultado").value = resultado;
+}
+
+
+
+           h
+
+
+function absolutoNumero() {
+    let num1 = Number(document.getElementById("num1").value);
+    let resultado = Math.abs(num1);
+    document.getElementById("resultado").value = resultado;
+}
+
+function randomNumero() {
+    let resultado = Math.random();
+    document.getElementById("resultado").value = resultado;
+}
+
+
+
+function roundNumero() {
+    let resultado = Number(document.getElementById("resultado").value);
+    let redondeado = Math.round(resultado);
+    document.getElementById("resultado").value = redondeado;
+}
+
+function floorNumero() {
+    let resultado = Number(document.getElementById("resultado").value);
+    let redondeado = Math.floor(resultado);
+    document.getElementById("resultado").value = redondeado;
+}
+
+function ceilNumero() {
+    let resultado = Number(document.getElementById("resultado").value);
+    let redondeado = Math.ceil(resultado);
+    document.getElementById("resultado").value = redondeado;
+}
 
 
 </script>
+</body>
 
-
-
-
-
-
-
+k
 
 </html>
