@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Actividades y Precios</title>
+        <script src="misScritps.js"></script>
+        <link rel="stylesheet" href="misEstilos.css">
+        
+    </head>
+   <body>
+        <h1>Recomendador de Actividades</h1>
+
+        <h3>Guía de Presupuestos:</h3>
+        <ol>
+            <li>Menos de ₡8 000</li>
+            <li>Entre ₡8 000 y ₡15 000</li>
+            <li>Más de ₡15 000</li>
+        </ol>
+
+
+        <p>Presupuesto:
+            <input id="presupuesto" type="number">
+        </p>
+
+        <p>Cantidad de Personas:
+            <input id="cantidadPersonas" type="number">
+        </p>
+
+        <p>Actividades Disponibles:
+        <select id="actividades">
+            <option value=""></option>
+            <option value="deportes">Deportes</option>
+            <option value="entretenimiento">Entretenimiento</option>
+            <option value="turismo">Turismo</option>
+            <option value="familiares">Actividades Familiares</option>
+        </select>
+        </p>
+
+        <button onclick="recomendarActividad()">Recomendar Actividad</button>
+        <button onclick="reiniciar()">Reiniciar</button>
+        
+        <p id="recomendacion">---</p>
+   </body>
+</html>
+
