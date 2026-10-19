@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practica 1</title>
+    </head>
+    
+    <body>
+        <script>
+    function testLoop(vueltas) {
+        let i = 1;
+        if (vueltas > 0) {
+            do {
+                console.log("Vuelta numero: " + i);
+                i++;
+            } while (i <= vueltas);
+        }
+    }
+
+    let numVueltas = parseInt(prompt("Introduce el numero de vueltas:"));
+    testLoop(numVueltas);
+    </script>
+
+        
+</body>
+</html>
