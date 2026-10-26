@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 1</title>
+</head>
+<body>
+
+    <div id="contenedor-vueltas"></div>
+
+    <script>
+        function contarVueltas(totalVueltas) {
+            const contenedor = document.getElementById("contenedor-vueltas");
+            let vueltaActual = 1;
+
+            contenedor.innerHTML = ""; 
+
+            while (vueltaActual <= totalVueltas) {
+                contenedor.innerHTML += `<h1>Va por la vuelta número ${vueltaActual}</h1>`;
+                vueltaActual++;
+            }
+        }
+
+        let entrada = prompt("¿Cuántas vueltas vas a dar?");
+        let numeroVueltas = parseInt(entrada);
+
+        if (!isNaN(numeroVueltas) && numeroVueltas > 0) {
+            contarVueltas(numeroVueltas);
+        } 
+    </script>
+
+</body>
+</html>

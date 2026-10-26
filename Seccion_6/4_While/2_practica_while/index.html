@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practiuca 1</title>
+</head>
+<body>
+
+    <script>
+        function testLoop(numeroInicio) {
+            let numeroActual = numeroInicio;
+
+            while (numeroActual <= 10) {
+                console.log(numeroActual);
+                numeroActual++;
+            }
+        }
+
+        let entrada = prompt("Ingresa un número para comenzar a contar hasta 10:");
+        let numeroUsuario = parseInt(entrada);
+
+        if (!isNaN(numeroUsuario) && numeroUsuario <= 10) {
+            testLoop(numeroUsuario);
+        } else if (numeroUsuario > 10) {
+            alert("El número ingresado ya es mayor a 10.");
+        } else {
+            alert("Por favor, ingresa un número válido.");
+        }
+    </script>
+
+</body>
+</html>
