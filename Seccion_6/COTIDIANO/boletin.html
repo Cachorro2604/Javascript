@@ -1,35 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notas Estudiantiles</title>
-    <script src="boletin.js"></script>
+    <title>Calificaciones</title>
     <link rel="stylesheet" href="misEstilos.css">
+    <script src="boletin.js"></script>
 </head>
-<body>
-    <h1>BIENVENIDO A TU BOLETÍN ESTUDIANTIL</h1>
-    <h2>Alumno: Fabricio Villegas</h2>
-    <h3>Notas:</h3>
-    <ul>
-        <li> 7 </li>
-        <li> 4 </li>
-        <li> 8 </li>
-        <li> 9 </li>
-        <li> 6 </li>
-    </ul>
 
-    <h5>Promedio:</h5>
-    <button onclick="calcularPromedio()">Calcular Promedio</button>
-    
-    <br>
-    <h5>Nota más alta:</h5>
-    <button onclick="notaALTA()">Buscar nota más alta</button>
-    
+<body onload="listarNotas()">
 
-    <br>
-    <h5>¿Hubo algún aplazo?</h5>
-    <button onclick="consultarAplazo()">Consultar Aplazo</button>
+    <div class="contenedor">
+        <h1>BIENVENIDO A TU BOLETÍN ESTUDIANTIL</h1>
+        <h4><strong>Alumno:</strong> <span style="font-weight: normal;">Fabricio Villegas</span></h4>
+
+        <div>
+            <h4>Notas:</h4>
+            <ul id="mi-lista"></ul>
+        </div>
+
+        <div>
+            <h4>Promedio: <span class="resultado" id="res-promedio"></span></h4>
+            <button onclick="calcularPromedio()">Calcular Promedio</button>
+        </div>
+
+        <div>
+            <h4>Nota más alta: <span class="resultado" id="res-alta"></span></h4>
+            <button onclick="notaMasAlta()">Buscar nota más alta</button>
+        </div>
+
+        <div>
+            <h4>Hay algún aplazo?: <span class="resultado" id="res-aplazado"></span></h4>
+            <button onclick="hayAplazados()">Consultar Aplazo</button>
+        </div>
+
+    </div>
 
 </body>
 </html>
