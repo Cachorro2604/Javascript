@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Etiquetas</title>
+        <style background="red"></style>
+    </head>
+    <body>
+        <script>
+            let alto = 4;
+            let ancho = 3;
+
+            loopExterno:
+            for (y = 1; y <= alto; y++) {
+                for (x = 1; x <= ancho; x++) {
+                    document.write(y + "." + x + "<br>");
+                    if (y == 4 && x == 1) {
+                        continue loopExterno;
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

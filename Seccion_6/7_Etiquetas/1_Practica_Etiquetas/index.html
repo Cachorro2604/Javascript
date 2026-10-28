@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practica 1</title>
+    </head>
+    <body>
+        <script>
+            
+
+            function testLoop() {
+                let miArray = [[2, 4, 5], [3, 0, 6], [9, 4, 7]];
+              
+                 loopExterno: for(let fila of miArray)  {
+                    for (let numero of fila) {
+                        if (numero ===0) {
+                            break loopExterno; 
+                        }
+                        console.log(numero)
+                    }
+
+                }
+            }
+
+            testLoop();
+        </script>
+    </body>
+</html>
