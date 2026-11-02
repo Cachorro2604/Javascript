@@ -1,0 +1,41 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 30px;
+    background-color:lightblue;
+
+}
+
+
+.contenedor {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+
+
+ul {
+    list-style-position: inside;
+}
+
+button {
+    padding: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+   
+}
+
+.resultado {
+    font-weight: bold;
+    color:black;
+    
+}
+
+h5{
+    color: black;
+    
+}
+
+span{
+    color: red;
+}

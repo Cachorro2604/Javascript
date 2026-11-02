@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima y Temperatura</title>
+    <script src="clima.js"></script>
+    <link rel="stylesheet" href="clima.css">
+ 
+</head>
+<body>
+    <h1>Cálculo de Clima y Temperatura</h1>
+    <h3>Costa Rica / Alajuela</h3>
+    <h3>Temperatura de esta semana:</h3>
+    <ul>    
+        <li> <strong> 25 grados </strong> </li>
+        <li> <strong> 28 grados </strong> </li>
+        <li> <strong> 22 grados </strong> </li>
+        <li> <strong> 30 grados </strong> </li>
+        <li> <strong> 18 grados </strong> </li>
+        <li> <strong> 24 grados </strong> </li>
+        <li> <strong> 27 grados </strong> </li>
+    </ul>    
+
+    <h5>Promedio de Temperaturas: <span id="promTemp"></span></h5> 
+     
+    <button onclick="calcularPromedio()">Calcular Temperatura</button>
+    <br>
+
+
+    <h5>Temperatura Máxima: <span id="promMax"></span></h5>
+    
+    <button onclick="calcularMax()">Calcular Temperatura Máxima</button>
+    <br>
+
+
+    <h5>Consultar Días Fríos: <span id="promFrio"></span></h5>
+    <button onclick="calcularFrio()">Calcular Día Frío</button>
+    <br>
+
+</body>
+</html>
